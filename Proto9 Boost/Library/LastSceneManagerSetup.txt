@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Proto9 Boost.unity
+  isLoaded: 1
+  isActive: 1

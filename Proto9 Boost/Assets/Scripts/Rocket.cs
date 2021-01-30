@@ -31,12 +31,12 @@ public class Rocket : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             print("moving left");
-            rocketRb.AddRelativeForce(Vector3.left * thrust);
+            transform.Rotate(Vector3.forward);
 
         } else if (Input.GetKey(KeyCode.D))
         {
             print("moving Right");
-            rocketRb.AddRelativeForce(Vector3.right * thrust);
+            transform.Rotate(-Vector3.forward);
         }
     }
 }

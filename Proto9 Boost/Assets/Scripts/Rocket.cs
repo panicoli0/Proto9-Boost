@@ -8,10 +8,14 @@ public class Rocket : MonoBehaviour
 
     public Rigidbody rocketRb;
     public float thrust;
+    private AudioSource rocketSound;
+
     // Start is called before the first frame update
     void Start()
     {
         rocketRb = GetComponent<Rigidbody>();
+        rocketSound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -26,6 +30,14 @@ public class Rocket : MonoBehaviour
         {
             print("Space Bar precced");
             rocketRb.AddRelativeForce(Vector3.up * thrust);
+            if (!rocketSound.isPlaying)
+            {
+                rocketSound.Play();
+            }
+            
+        } else
+        {
+            rocketSound.Stop();
         }
 
         if (Input.GetKey(KeyCode.A))

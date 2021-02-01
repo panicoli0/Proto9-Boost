@@ -21,11 +21,31 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessInput();
+        Rotate();
+        Thrust();
     }
 
-    private void ProcessInput()
+    private void Rotate()
     {
+        
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            print("moving left");
+            transform.Rotate(Vector3.forward);
+
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            print("moving Right");
+            transform.Rotate(-Vector3.forward);
+        }
+    }
+
+    private void Thrust()
+    {
+        rocketRb.freezeRotation = true;
+
         if (Input.GetKey(KeyCode.Space))
         {
             print("Space Bar precced");
@@ -34,21 +54,13 @@ public class Rocket : MonoBehaviour
             {
                 rocketSound.Play();
             }
-            
-        } else
+
+        }
+        else
         {
             rocketSound.Stop();
         }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            print("moving left");
-            transform.Rotate(Vector3.forward);
-
-        } else if (Input.GetKey(KeyCode.D))
-        {
-            print("moving Right");
-            transform.Rotate(-Vector3.forward);
-        }
+        rocketRb.freezeRotation = false;
     }
 }

@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
+    [SerializeField] float mainThrust;
+    [SerializeField] float rcsThrust = 100f;
 
-    public Rigidbody rocketRb;
-    public float thrust;
-    private AudioSource rocketSound;
+    Rigidbody rocketRb;
+    
+    AudioSource rocketSound;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +29,20 @@ public class Rocket : MonoBehaviour
 
     private void Rotate()
     {
-        
+        float rotationThisFrame = rcsThrust * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.A))
         {
             print("moving left");
-            transform.Rotate(Vector3.forward);
+            transform.Rotate(Vector3.forward * rotationThisFrame);
 
         }
         else if (Input.GetKey(KeyCode.D))
         {
             print("moving Right");
-            transform.Rotate(-Vector3.forward);
+            transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
+        rocketRb.freezeRotation = false;
     }
 
     private void Thrust()
@@ -49,7 +52,7 @@ public class Rocket : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             print("Space Bar precced");
-            rocketRb.AddRelativeForce(Vector3.up * thrust);
+            rocketRb.AddRelativeForce(Vector3.up * mainThrust);
             if (!rocketSound.isPlaying)
             {
                 rocketSound.Play();
@@ -61,6 +64,6 @@ public class Rocket : MonoBehaviour
             rocketSound.Stop();
         }
 
-        rocketRb.freezeRotation = false;
+        
     }
 }

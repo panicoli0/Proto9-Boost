@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4184861238612206450}
   m_Layer: 0
   m_Name: OptimizedTree
-  m_TagString: Untagged
+  m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1719619579175561422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20.9, y: -3.7, z: 0}
-  m_LocalScale: {x: 1, y: 0.73329, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1ab9f50a115f84e75b94ce8a4d8b59d7, type: 2}
+  - {fileID: 21339096207555858, guid: 0900a1afef4b94385b0e9784dc59961e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

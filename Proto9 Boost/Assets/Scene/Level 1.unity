@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 128396079130555141, guid: 0900a1afef4b94385b0e9784dc59961e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
+      objectReference: {fileID: 0}
     - target: {fileID: 779572857663852115, guid: 0900a1afef4b94385b0e9784dc59961e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -266,6 +271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 128396079130555141, guid: 0900a1afef4b94385b0e9784dc59961e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
       objectReference: {fileID: 0}
     - target: {fileID: 779572857663852115, guid: 0900a1afef4b94385b0e9784dc59961e,
         type: 3}
@@ -341,6 +351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 128396079130555141, guid: 0900a1afef4b94385b0e9784dc59961e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
+      objectReference: {fileID: 0}
     - target: {fileID: 779572857663852115, guid: 0900a1afef4b94385b0e9784dc59961e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -415,6 +430,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 128396079130555141, guid: 0900a1afef4b94385b0e9784dc59961e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
+      objectReference: {fileID: 0}
     - target: {fileID: 779572857663852115, guid: 0900a1afef4b94385b0e9784dc59961e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -488,6 +508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 128396079130555141, guid: 0900a1afef4b94385b0e9784dc59961e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
       objectReference: {fileID: 0}
     - target: {fileID: 779572857663852115, guid: 0900a1afef4b94385b0e9784dc59961e,
         type: 3}
@@ -917,6 +942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719619579175561422, guid: 24a609622ab75499d8ac2d4ac62fb974,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
       objectReference: {fileID: 0}
     - target: {fileID: 2073043459293762968, guid: 24a609622ab75499d8ac2d4ac62fb974,
         type: 3}

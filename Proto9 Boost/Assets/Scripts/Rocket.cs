@@ -8,6 +8,9 @@ public class Rocket : MonoBehaviour
 {
     [SerializeField] float mainThrust;
     [SerializeField] float rcsThrust = 100f;
+    [SerializeField] AudioClip EngineSound;
+    [SerializeField] AudioClip winSound;
+    [SerializeField] AudioClip deadSound;
 
     Rigidbody rocketRb;
     
@@ -46,10 +49,7 @@ public class Rocket : MonoBehaviour
 
             switch (other.gameObject.tag)
             {
-                case "OK":
-                    Debug.Log("Ganastes PAPA");
-                    break;
-
+                
                 case "Friendly":
                     //Do nothing
                     Debug.Log("Este es: " + other.gameObject.tag);
@@ -57,16 +57,12 @@ public class Rocket : MonoBehaviour
 
                 case "Finish":
                     //Ganastes
-                    state = State.Transcending;
-                    Debug.Log("Este es: " + other.gameObject.tag);
-                    Invoke("LoadNextLevel", 1f);
+                    StartWinSecuence(other);
                     break;
 
                 default:
                     //Pediste
-                    state = State.Dying;
-                    Debug.Log("Le pegaste a algo que te mata: " + other.gameObject.tag);
-                    Invoke("LoadFirstLevel", 1f);
+                    StartDeadSecuence(other);
                     break;
             }
         }
@@ -74,9 +70,26 @@ public class Rocket : MonoBehaviour
        
     }
 
+    private void StartWinSecuence(Collision other)
+    {
+        state = State.Transcending;
+        Debug.Log("Este es: " + other.gameObject.tag);
+        Invoke("LoadNextLevel", 1f);
+        rocketSound.PlayOneShot(winSound);
+    }
+
+    private void StartDeadSecuence(Collision other)
+    {
+        state = State.Dying;
+        Debug.Log("Le pegaste a algo que te mata: " + other.gameObject.tag);
+        rocketSound.PlayOneShot(deadSound);
+        Invoke("LoadFirstLevel", 1f);
+    }
+
     private void LoadNextLevel()
     {
         SceneManager.LoadScene(1);
+    
     }
 
     private void LoadFirstLevel()
@@ -112,7 +125,7 @@ public class Rocket : MonoBehaviour
             rocketRb.AddRelativeForce(Vector3.up * mainThrust);
             if (!rocketSound.isPlaying)
             {
-                rocketSound.Play();
+                rocketSound.PlayOneShot(EngineSound);
             }
 
         }

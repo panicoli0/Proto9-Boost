@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 5}
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 524}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 324}
   m_MaxSize: {x: 4002, y: 8024}
   vertical: 1
-  controlID: 228
+  controlID: 13
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 1238
     height: 460
-  m_MinSize: {x: 102, y: 124}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 17}
@@ -124,7 +124,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1108
-  m_MinSize: {x: 950, y: 548}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &6
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: bznLayout
+  m_LastLoadedLayoutName: 
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,10 +170,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1058
-  m_MinSize: {x: 709, y: 498}
-  m_MaxSize: {x: 18006, y: 14048}
+  m_MinSize: {x: 709, y: 474}
+  m_MaxSize: {x: 18006, y: 14024}
   vertical: 0
-  controlID: 227
+  controlID: 127
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 365
     height: 1058
-  m_MinSize: {x: 234, y: 498}
-  m_MaxSize: {x: 10004, y: 14048}
+  m_MinSize: {x: 234, y: 474}
+  m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 209
+  controlID: 128
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: -160
+    m_CachedPref: 258
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
@@ -409,7 +409,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7e300000
     m_LastClickedID: 12414
-    m_ExpandedIDs: ffffffff00000000da2a0000fe2a0000082c0000f82d0000
+    m_ExpandedIDs: 000000003a2600005e260000882600006c2700005c2800007a290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -437,18 +437,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000da2a0000fe2a0000282b0000082c0000f82c0000f82d0000
+    m_ExpandedIDs: ffffffff000000003a2600005e260000882600006c270000e42700005c2800007a290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Level 0
-      m_OriginalName: Level 0
+      m_Name: Level 1
+      m_OriginalName: Level 1
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 11338
+      m_UserData: 10372
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -681,23 +681,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ae270000
       m_LastClickedID: 0
-      m_ExpandedIDs: cc99ffff349cffff26a0ffff0ea2ffffcca6ffff4ab0ffff24b6ffff8ac1ffffc0c8ffff90ccfffff4dcffff96deffff70e0ffff1af1fffff8f1ffffd6f2ffff
+      m_ExpandedIDs: 04bfffffeec1ffff6ac4ffff84c7ffffbec9ffff12ceffffe8d0ffffb2d4ffff3ed8ffffb4daffff0edcffff62ddffffc2e0ffff86e1ffff62e7ffffc2e8ffff56eaffffdefbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Launch Pad
-        m_OriginalName: Launch Pad
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -9058
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 

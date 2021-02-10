@@ -8,6 +8,7 @@ public class Rocket : MonoBehaviour
 {
     [SerializeField] float mainThrust;
     [SerializeField] float rcsThrust = 100f;
+    [SerializeField] float levelLoadDelay = 2f;
 
     [SerializeField] AudioClip EngineSound;
     [SerializeField] AudioClip winSound;
@@ -82,17 +83,17 @@ public class Rocket : MonoBehaviour
         Debug.Log("Este es: " + other.gameObject.tag);
         particleSuccess.Play();
         rocketSound.PlayOneShot(winSound);
-        Invoke("LoadNextLevel", 1f);
+        Invoke("LoadNextLevel", levelLoadDelay);
         
     }
 
     private void StartDeadSecuence(Collision other)
     {
         state = State.Dying;
-        Debug.Log("Le pegaste a algo que te mata: " + other.gameObject.tag);
         particleExplotion.Play();
         rocketSound.PlayOneShot(deadSound);
-        Invoke("LoadFirstLevel", 1f);
+        Invoke("LoadFirstLevel", levelLoadDelay);
+        //Destroy(gameObject);
     }
 
     private void LoadNextLevel()

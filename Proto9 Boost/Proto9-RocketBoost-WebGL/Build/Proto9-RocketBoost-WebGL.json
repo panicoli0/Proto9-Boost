@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Proto0 Boost",
+"dataUrl": "Proto9-RocketBoost-WebGL.data.unityweb",
+"wasmCodeUrl": "Proto9-RocketBoost-WebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "Proto9-RocketBoost-WebGL.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

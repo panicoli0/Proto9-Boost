@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
+    [SerializeField] bool collisionDisable = false;
+    [SerializeField] int level;
     [SerializeField] float mainThrust;
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float levelLoadDelay = 2f;
@@ -33,12 +35,19 @@ public class Rocket : MonoBehaviour
 
         rocketRb = GetComponent<Rigidbody>();
         rocketSound = GetComponent<AudioSource>();
-        //rocketParticle = GetComponent<ParticleSystem>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if(Debug.isDebugBuild)
+        {
+            LoadLevelKey();
+            AvoidCollisionKey();
+        }
+        
         if (state == State.Alive)
         {
             Rotate();
@@ -47,12 +56,13 @@ public class Rocket : MonoBehaviour
 
         
     }
+ 
 
     void OnCollisionEnter(Collision other)
     {
         
         {
-            if (state != State.Alive) { return; } //Ignora collisiones
+            if (state != State.Alive || collisionDisable) { return; }
 
             switch (other.gameObject.tag)
             {
@@ -98,8 +108,30 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        SceneManager.LoadScene(1);
-    
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; //devuelve en nro de scena
+        int nextSceneIndex = currentSceneIndex + 1;
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) //si la prox scene es igual a la cant de levels
+        {
+            nextSceneIndex = 0; // volve a empezar
+        } 
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+    private void LoadLevelKey()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        
+    }
+    private void AvoidCollisionKey()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            //Desactivar las colisiones
+            collisionDisable = !collisionDisable;
+
+        }
     }
 
     private void LoadFirstLevel()

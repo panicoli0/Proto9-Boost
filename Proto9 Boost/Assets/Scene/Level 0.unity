@@ -1433,7 +1433,7 @@ PrefabInstance:
     - target: {fileID: 2049247570212352908, guid: 95db4b892f5f440299bac5e5dba68848,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.834415
+      value: -27.9
       objectReference: {fileID: 0}
     - target: {fileID: 2049247570212352908, guid: 95db4b892f5f440299bac5e5dba68848,
         type: 3}
@@ -1770,6 +1770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Launch Pad (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 970246186543357414, guid: 40424c64ecafb45279c2ba9bb89d8202,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40424c64ecafb45279c2ba9bb89d8202, type: 3}
